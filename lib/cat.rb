@@ -1,7 +1,7 @@
 class Cat
   # code goes here
-  attr_accessor  :owner , :mood
-  attr_reader :name
+  attr_accessor  :mood ,:owner
+  attr_reader :name 
   @@all = [] 
   def initialize(name , owner)
     @name = name
@@ -13,17 +13,7 @@ def self.all
   @@all 
 end 
 
-def sell_pets
-  @pets.collect do |species, instances|
-    instances.each do |pet|
-      pet.mood = "nervous"
-    end
-    instances.clear
-  end
-end
 
-def pets 
-  @pets 
-end 
- binding.pry
+
+
 end
